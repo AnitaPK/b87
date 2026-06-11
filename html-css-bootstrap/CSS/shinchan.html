@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>shinchan</title>
+    <style>
+        h1{
+            color:red;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 2px black, 3px 3px 2px orange;
+        }
+        p.paraHeader{
+            font-size: larger;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 70%;
+            margin: 50px auto;
+            text-align: justify;
+        }
+        img.headerIMAGE{
+            display: block;
+            width: 50%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 20px;
+        }
+        img.headerIMAGE:hover{
+            box-shadow: 2px 2px 3px 2px gray;
+        }
+        div.headerBTN{
+            text-align: center;
+        }
+        a:link{
+            background-color: aquamarine;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+        a:hover{
+            text-decoration: underline;
+            background-color: blue;
+            color: white;
+        }
+        a:active{}
+        a:visited{
+            /* background-color: aquamarine; */
+        }
+        .galleryImages{
+            background-color: beige;
+            display: flex;
+            margin-top: 30px;
+        }
+        .charactersCard{
+            width: 16rem;
+            background-color: aquamarine;
+            border: 1px solid red;
+            margin: 10px;
+        }
+        .charactersCard img{
+            width: 100%;
+            height: 200px;
+        }
+        .charactersCard h3{
+            text-align: center;
+        }
+        .charactersCard p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 >
+            shinchan
+        </h1>
+        <p class="paraHeader">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti laborum accusamus, odio in natus architecto id nostrum voluptatum autem, corporis rerum explicabo est. Illo vero reiciendis repellat, quis temporibus a sint dolorum consectetur mollitia maiores magni saepe ab totam consequatur, non omnis incidunt blanditiis repellendus sed sequi laudantium? Aspernatur.</p>
+        <img src="./assets/headerChinchan.avif" alt="" class="headerIMAGE">
+        <div class="headerBTN">
+        <a href="https://en.wikipedia.org/wiki/Crayon_Shin-chan" target="_blank">Click me for More Details</a>
+        </div>
+    </header>
+
+    <section class="galleryImages">
+        <div class="charactersCard">
+            <img src="./assets/himawari.png" alt="">
+            <h3>HIMAWARI </h3>
+            <p>Sister of Shinchan</p>
+        </div>
+        <div class="charactersCard">
+            <img src="./assets/sheroa.jpeg" alt="">
+            <h3>SHEROA</h3>
+            <p>Pet animal</p>
+        </div>
+        <div class="charactersCard">
+            <img src="./assets/botaro.jpeg" alt="">
+            <h3>BOCHAN</h3>
+            <p>Friend of Shinchan</p>
+        </div>
+        <div class="charactersCard">
+            <img src="./assets/nanni.jpeg" alt="">
+            <h3>NAANI</h3>
+            <p>Friend of Shinchan</p>
+        </div>
+    </section>
+
+
+</body>
+</html>
