@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oggy</title>
+    <style>
+        h1 {
+            color: red;
+            text-align: center;
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 2px black, 3px 3px 2px orange
+        }
+
+        p.paraHeader {
+            font-size: large;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            width: 70%;
+            margin: 50px auto;
+            text-align: justify;
+            line-height: 1.6;
+        }
+
+        img.headerIMAGE {
+            display: block;
+            width: 50%;
+            height: auto;
+            margin: 30px auto;
+            border-radius: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        img.headerIMAGE:hover {
+            box-shadow: 2px 2px 3px 2px gray;
+        }
+
+        div.headerBTN {
+            text-align: center;
+        }
+
+        a:link {
+            background-color: aquamarine;
+            text-decoration: none;
+            font-size: 20px;
+            padding: 10px 20px;
+            border-radius: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            background-color: blue;
+            color: white;
+        }
+
+        a:active {}
+
+        a:Visited {
+            /* background-color: aquamarine;*/
+        }
+
+        .galleryImages {
+            background-color: beige;
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .charactersCard {
+            width: 16rem;
+            background-color: aquamarine;
+            border: 1px solid red;
+            margin: 10px;
+        }
+
+        .charactersCard img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .charactersCard h3 {
+            text-align: center;
+            text-transform: capitalize;
+        }
+
+        .charactersCard p {
+            text-align: center;
+            color: #333;
+        }
+
+
+/* 
+        < 300px 
+        <=650px
+        <=900px
+        >=1400 */
+
+
+        @media screen and (max-width : 300px){
+            /* 0 - 300px */
+            body{
+                background-color: aqua;
+            }
+            h1{
+                font-size: 20px;
+                text-shadow: none;
+            }
+            p.paraHeader{
+                margin: 0;
+                width: 100%;
+                line-height: 1;
+                font-size: 15px;
+                text-align: center;
+            }
+            img.headerIMAGE{
+                width:100%;
+                border-radius: 0;
+            }
+            .galleryImages{
+                flex-direction: column;
+            }
+        }
+
+        @media screen and ((min-width:301px) and (max-width : 650px)){
+            /* 301 - 650 */
+            body{
+                background-color: coral;
+                color: cornsilk;
+            }
+            h1{
+                color: chartreuse;
+                font-size: 30px;
+            }
+            p.paraHeader{
+                width: 90%;
+                line-height: 1.1;
+            }
+            img.headerIMAGE{
+                width: 100%;
+                border-radius: 2px;
+                height: 180px;
+            }
+            .galleryImages{
+                flex-wrap: wrap;
+            }
+        }
+
+        @media screen and (min-width : 1400px){
+                /* greater than 1400px */
+        };
+            
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Oggy and the cockroaches
+        </h1>
+        <p class="paraHeader">Oggy, an anthropomorphic cat, spends his days watching television, lounging around, and
+            eating, but is continually pestered and annoyed by three cockroaches (Joey, Marky, and Dee Dee) in his
+            house, whose endgoal is to obtain absolute control of Oggy's house through any means. The roaches' slapstick
+            mischief ranges from mostly plundering Oggy's refrigerator, to hijacking the train he just boarded. In many
+            situations, Oggy is also helped by his cousin, Jack, who is more violent and short-tempered than him and is
+            also annoyed by the cockroaches. Other recurring characters include Bob, Oggy's short-tempered bulldog
+            neighbor; and Olivia, a female cat who becomes Oggy's love interest.</p>
+        <img src="./assets/Oggy.jpeg" alt="" class="headerIMAGE">
+        <div class=" headerBTN">
+            <a href="https://en.wikipedia.org/wiki/Oggy_and_the_Cockroaches" target="_blank">Click more Details</a>
+        </div>
+    </header>
+
+    <section class="galleryImages">
+        <div class="charactersCard">
+            <img src="./assets/jack.jpeg" alt="">
+            <h3>Jack</h3>
+            <p>Oggy ka Brother</p>
+        </div>
+
+        <div class="charactersCard">
+            <img src="./assets/jahpalu.jpeg" alt="">
+            <h3>jahpalu</h3>
+            <p>Oggy ka Dushaman</p>
+        </div>
+
+        <div class="charactersCard">
+            <img src="./assets/Papalu.jpeg" alt="">
+            <h3>papalu</h3>
+            <p>Oggy ka Dushaman</p>
+        </div>
+
+        <div class="charactersCard">
+            <img src="./assets/taplu.jpeg" alt="">
+            <h3>Tapalu</h3>
+            <p>Oggy ka Dushaman</p>
+        </div>
+    </section>
+
+
+    <footer>
+        Copyright Oggy and the Cockroaches
+    </footer>
+</body>
+
+</html>
