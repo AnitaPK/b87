@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .containerOne{
+            width:600px;
+            height: 600px;
+            background-color: palevioletred;
+            display: flex;
+            flex-direction: row;
+            color: white;
+            /* gap:10px; */
+            justify-content: space-between;
+            /* align-items: center; */
+            /* flex-wrap: wrap; */
+        }
+        .box{
+            /* width: 100px;
+            height: 100px; */
+            background-color: brown;
+            /* flex: 20%; */
+            flex: 1;
+        }
+        .lengthyBox{
+            width:450px;
+            /* flex-grow: inherit; */
+            flex: 2;
+        }
+        .BOX1{
+            order: 1;
+        }
+        .BOX2{
+            order: 2;
+
+        }
+        .BOX3{
+            order: 3;
+
+        }
+        .BOX4{
+            order: 4;
+
+        }
+        .BOX5{
+            order: 5;
+
+        }
+.containerLayout{
+    /* width: 700px;height: 700px; */
+    background-color: pink;
+    display: flex;
+    flex-wrap: wrap;
+}
+.header1{
+    height: 100px;
+    background-color: rgb(78, 244, 183);
+    flex: 100%;
+}
+.asideBar{
+    background-color: rgb(3, 122, 83);
+    flex: 20%;
+    height: 60vh;
+}
+.mainContainer{
+    background-color: rgb(249, 89, 116);
+    flex: 80%;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-around;
+}
+.imgSec{
+    width: 200px;
+    height: 200px;
+    background-color: bisque;
+}
+.footer1{
+    background-color:  rgb(78, 244, 183);
+    height: 100px;
+    flex:100%
+}
+
+        @media screen and (max-width:400px){
+            .containerOne{
+            flex-direction: column;
+            }
+            .BOX1{
+            order: 2;
+        }
+        .BOX2{
+            order: 3;
+
+        }
+        .BOX3{
+            order: 1;
+
+        }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="containerLayout">
+        <div class="header1"></div>
+        <div class="asideBar"></div>
+        <div class="mainContainer">
+            <div class="imgSec"></div>
+            <div class="imgSec"></div>
+            <div class="imgSec"></div>
+        </div>
+        <div class="footer1"></div>
+    </div>
+
+
+
+    <div class="containerOne">
+        <div class="box BOX1" >1111Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, dicta?</div>
+        <div class="box BOX2">2222Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, ratione.</div>
+        <div class="box lengthyBox BOX3">333Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero earum dolorum, esse dolores voluptatum quam quisquam nihil praesentium natus optio qui quaerat fugiat totam fuga soluta suscipit voluptatibus adipisci a.</div>
+        <div class="box BOX4">444Lorem, ipsum dolor.</div>
+        <div class="box BOX5">555Lorem ipsum dolor sit amet.</div>
+    </div>
+
+</body>
+</html>
