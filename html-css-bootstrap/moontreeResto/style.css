@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.headingSection{
+    text-align: center;
+    background-color: orange;
+    color: red;
+    text-shadow: 1px 1px 2px gray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cardsSection{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width:16rem;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card img{
+    width: 100%;
+    height: 53%;
+
+}
+
+.card h3{
+    text-align: center;
+}
+.card p{
+    margin: 5px 9px;
+}
+.descriptionCard{
+    font-size: 12px;
+}
+
+.AddToCartbtn{
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 9px;
+}
+.AddToCartbtn:hover{
+    background-color: rgb(235, 153, 0);
+    cursor: pointer;
+}
+.BuyNowBTN{
+    background-color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px solid black;
+}
+.BuyNowBTN:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+@media screen and (max-width:750px){
+    .cardsSection{
+        flex-wrap: wrap;
+
+    }
+}
+
+
+@media screen and (max-width:300px){
+    .cardsSection{
+        flex-direction: column;
+    }
+}
