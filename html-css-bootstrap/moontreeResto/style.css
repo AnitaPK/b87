@@ -4,6 +4,48 @@
     padding: 0;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+.heroSection{
+    background-color: rgb(254, 242, 227);
+    height: 350px;
+    padding-top: 80px;
+    position: relative;
+}
+.heroHeadingSection{
+    background-image: linear-gradient(to right, red,orange );
+    height: 60%;
+    width: 60%;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+}
+.heroHeadingSection h2{
+    font-size: 4rem;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10%;
+}
+.imgEffect{
+    width: 100px;
+    height: 100px;
+}
+.icecreamEffctImg{
+    background-image: radial-gradient(red, green, red);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.icecreamEffctImg1{
+    background-image: radial-gradient(red, green, red);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.biryaniEffectImg{
+
+}
 .headingSection{
     text-align: center;
     background-color: orange;
