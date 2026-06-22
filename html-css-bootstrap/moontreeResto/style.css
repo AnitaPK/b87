@@ -109,6 +109,25 @@
     cursor: pointer;
 }
 
+.conatinerOrder{
+    width: 70%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 10px;
+    background-color: rgb(254, 246, 236);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+
+}
+.conatinerOrder p{
+    text-align: center;
+    font-size: 32px;
+    font-family: cursive;
+}
 
 
 

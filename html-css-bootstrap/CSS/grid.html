@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .containerGrid {
+            display: grid;
+            background-color: pink;
+            /* width: 600px;
+            height: 600px; */
+            /* grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr; */
+        }
+
+        .box {
+            /* width: 100px;
+            height: 100px; */
+            background-color: red;
+            /* grid-row-start: ;
+            grid-row-end: ;
+            grid-column-start: ;
+            grid-column-end: ; */
+        }
+
+        .grapes {
+            background-color: blueviolet;
+            /* height: 100px;
+            width: 150px; */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            height: 200px;
+        }
+
+        .strwaberry {
+            background-color: red;
+            /* height: 100px;
+            width: 150px; */
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 2;
+            grid-column-end: 3;
+            grid-row-end: 2;
+            height: 200px;
+
+        }
+
+        .watermelon {
+            background-color: rgb(199, 134, 134);
+            /* width: 300px;
+            height: 400px; */
+            grid-row-start: 1;
+            grid-row-end: 3;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            height: 500px;
+
+        }
+
+
+        .orange {
+            background-color: orange;
+            /* height: 300px;
+            width: 300px; */
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            height: 300px;
+
+        }
+
+        .papaya {
+            background-color: yellow;
+            /* height: 200px;
+            width: 300px; */
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 1;
+            grid-column-end: 3;
+            height: 250px;
+
+        }
+
+        .pineapple {
+            background-color: rgb(51, 162, 53);
+            /* height: 200px;
+            width: 300px; */
+            grid-row-start: 3;
+            grid-row-end: 4;
+            grid-column-start: 3;
+            grid-column-end: 4;
+            height: 250px;
+
+        }
+        .layoutContainer{
+            display: grid;
+            grid-template-areas: 'h1 h1 h1 h1'
+                                'n1 n1 n1 n1'
+                                'left1 mainContent mainContent right1'
+                                'foo foo foo foo';
+
+        }
+        .header1{
+            height: 150px;
+            background-color: red;
+            grid-area: h1;
+        }
+        .navbar1{
+            height: 100px;
+            background-color: aquamarine;
+            grid-area: n1;
+        }
+        .leftSide{
+            height: 400px;
+            background-color: blueviolet;
+            grid-area: left1;
+        }
+        .mainContent{
+            grid-area: mainContent;
+
+        }
+        .rightSide{
+            grid-area: right1;
+        }
+        .footer{
+            height: 200px;
+            background-color: black;
+            grid-area: foo;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="layoutContainer">
+        <div class="header1"></div>
+        <div class="navbar1"></div>
+        <div class="leftSide">
+            <ul>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+            </ul>
+        </div>
+        <div class="mainContent">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, vero debitis dignissimos, at deserunt temporibus facere dicta minus soluta adipisci eum cum esse magnam aliquam neque excepturi nesciunt alias molestias perspiciatis mollitia cumque. Ratione sapiente quo modi veritatis similique, labore quaerat accusamus itaque ab dignissimos repudiandae soluta ex quas laboriosam distinctio qui reiciendis sequi suscipit pariatur id! Quos corporis iusto minima ea totam autem, nesciunt iste sapiente, suscipit voluptatibus molestias nostrum neque fugiat ipsam recusandae tenetur accusantium obcaecati odio magnam. Illo laudantium veritatis eligendi recusandae repellendus, sint molestiae odit cumque laborum voluptas id praesentium officiis harum magnam quae eius quia, modi reiciendis tenetur tempora animi voluptatibus doloremque. Nemo magni numquam eveniet sit inventore corporis obcaecati dicta ipsum! Porro tenetur voluptatibus inventore quas libero? Explicabo reiciendis assumenda, incidunt laudantium perspiciatis ab atque necessitatibus accusamus totam fugiat beatae exercitationem asperiores aliquid molestiae perferendis saepe tempora officiis deserunt. Laborum quos, nobis rerum quia corporis ducimus, omnis ut impedit est possimus nulla dolorum ratione adipisci? Eum tempore dolores dolorum laboriosam mollitia dicta iure iusto modi amet deleniti aliquid excepturi eveniet voluptate impedit, harum provident quisquam suscipit doloribus ipsa? Provident quibusdam, fuga fugit ex sunt ullam sint nulla ducimus laudantium voluptate! Eum, minima, cupiditate, rerum totam accusamus pariatur nesciunt officiis rem amet iusto natus fugiat molestiae vel neque adipisci facilis ut consequatur quo earum sunt dolorem asperiores odio nam. Quae cumque aperiam fugit hic provident quis eveniet totam molestiae, delectus nobis odit saepe quisquam vero fuga facere iure eius. Sequi doloremque unde optio. Ratione ab at, dicta consequuntur ipsa cum enim nostrum laboriosam. Voluptas voluptatum quibusdam ex eos porro aspernatur deleniti dolore expedita blanditiis labore tempora nihil voluptatibus qui fuga, ab ipsam, consequatur quisquam ullam? Nisi sunt, explicabo reprehenderit quasi nam natus eum placeat neque error et. Dolor nesciunt non ex laboriosam consequatur aliquid magni unde, nisi eos fugiat? Culpa esse dolorum at ea, ad laudantium exercitationem, suscipit cumque id itaque magnam quis maxime eius labore, nemo dicta ratione vel? Obcaecati modi, enim aperiam expedita, temporibus, vel aut quas sequi alias veniam voluptates aliquam nulla! Voluptatem reiciendis eligendi tenetur dicta temporibus, debitis excepturi veniam veritatis qui, doloribus facere dignissimos porro nulla voluptatum laboriosam nostrum? Consectetur quis minima praesentium eos consequatur commodi nihil non, facere tempora odio dolor ipsam officia rerum doloremque dolore. Vero hic velit dignissimos ut ipsam dolorem tenetur aliquid, rerum natus vel labore ipsa corporis facere qui sed consectetur ipsum! Corrupti ea natus tenetur optio inventore recusandae vero beatae aliquam quia tempora soluta ratione voluptatibus porro nihil illum, commodi ipsa amet! Beatae sunt ipsum delectus aspernatur praesentium reiciendis, perferendis optio, inventore, ab eaque voluptates repellat explicabo temporibus labore aut suscipit at accusamus fugiat asperiores! Aspernatur sint esse quaerat consequatur laboriosam, repellat voluptatibus! Deserunt dolorem, ab voluptates nihil doloribus mollitia assumenda expedita nostrum, facere animi eius id! Veniam eum sequi, officiis, magni iusto recusandae deserunt dolores debitis facilis, quos veritatis. Et iste delectus ipsam rerum blanditiis odio quis minus adipisci ad soluta, dolor ipsa ea itaque libero facilis reiciendis deserunt ab nihil, nulla fuga.
+        </div>
+        <div class="rightSide">
+             <ul>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+                <li>hello</li>
+            </ul>
+        </div>
+        <div class="footer"></div>
+    </div>
+
+    <div class="containerGrid">
+        <div class="grapes"></div>
+        <div class="strwaberry"></div>
+
+        <div class="watermelon"></div>
+        <div class="orange"></div>
+        <div class="papaya"></div>
+        <div class="pineapple"></div>
+
+    </div>
+</body>
+
+</html>
