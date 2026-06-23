@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+}
+
+.mainNavbar{
+    display: flex;
+    justify-content: space-between;
+    height: 150px;
+}
+
+
+
+.leftNav{
+    display: flex;
+    margin: 20px 30px;
+}
+
+ul.listMenu{
+    list-style-type: none;
+    margin-left: 30px;
+}
+
+li.NavItem{
+    display: inline-block;
+    margin-top: 10px;
+}
+.navMenu:link{
+    text-decoration: none;
+    color: black;
+    padding: 20px;
+}
+.navMenu:hover{
+    color: black;
+    border-bottom: 3px solid green;
+}
+
+.navMenu:active{
+    color: black;
+
+}
+
+.navMenu:visited{
+    color: black;
+
+}
+
+
+
+.rightNav{
+    display: flex;
+    margin: 20px 30px;
+
+}
+.searchNav{
+    padding: 10px;
+    border: 1px solid rgb(197, 197, 197);
+    /* add code for search icon  */
+    background-color: rgb(233, 233, 233);
+}
+.searchNav:focus{
+    background-color: white;
+    border: 1px solid rgb(197, 197, 197);
+
+}
+
+ul.rightICONSList{
+list-style-type: none;
+}
+
+
+li.listITEMIcons{
+    display: inline-block;
+}
+
+a.iconItem:link{
+    display: block;
+    color: black;
+    text-decoration: none;
+    padding: 10px 20px;
+
+}
+
+a.iconItem:hover{
+    color: black;
+border-bottom: 3px solid green;
+}
+a.iconItem:active{
+    color: black;
+
+}
+a.iconItem:visited{
+    color: black;
+
+}
+
+a.iconItem i{
+    font-size: 20px;
+}
+a.iconItem span{
+    font-size: 12px;
+    /* padding-left: 15px; */
+}
+
