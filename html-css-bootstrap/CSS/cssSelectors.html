@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            /* universal selector  */
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        body{}
+        div{}
+        h2{}
+        .details{}
+        #paraDemo{}
+        p:hover{
+            color: red;
+        }
+
+        p::first-letter{
+            font-size: 60px;
+        }
+        p::first-line{
+            color: blue;
+        }
+        input{
+            background-color: red;
+        }
+        input[type]{
+            background-color: blue;
+        }
+        input[type="text"]{
+            background-color: green;
+        }
+        input:focus{
+            background-color: gray;
+        }
+        div.demoThree p.demo3{}
+
+        div.demoThree > p{}
+    </style>
+</head>
+<body>
+    <h1>CSS Selectors</h1>
+    <pre>
+            1. simple selectors 
+                 universal selector
+                 element selectors 
+                 class selectors 
+                 ID selectors
+                 grouping selector 
+            2. Pseudo-class selectors 
+                :hover , :link , :active , :visited :nth-child, etc 
+            3. Pseudo-elements selectors
+                ::first-letter , ::first-letter ,
+            4. Attribute Selectors 
+            5. Combinator selectors 
+                space > 
+
+    </pre>
+    <p class="details">Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam, ipsam!</p>
+    <p id="paraDemo">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum, dolore et. Cumque incidunt earum sint, nemo ipsam tempora dolor provident aut, blanditiis eaque corrupti, aperiam facilis quam assumenda non repellendus. Vel distinctio quod ipsum! Officia rem, fugiat saepe vel facilis quis neque voluptatum doloribus debitis rerum eius, deleniti nihil. Aliquid.</p>
+   <input >
+    <input type="text" >
+    <input type="email">
+    <img src="" alt="">
+    <a href="" target=""></a>
+
+
+
+    <div class="demoOne"></div>
+    <div class="demoTwo"></div>
+    <div class="demoThree">
+        <div class="demo1"></div>
+        <div class="demo2">
+            <p class="demo3"></p>
+            <p></p>
+        </div>
+        <p class="demo3"></p>
+        <p></p>
+        <p class="demo3"></p>
+
+    </div>
+    <p class="demoFour"></p>
+    <p class="demoFive"></p>
+
+
+</body>
+</html>
