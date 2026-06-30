@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        .scaleBox:hover{
+            transform: scale(1,1);
+        }
+        .rotateBox:hover{
+            transform: rotate(60deg);
+        }
+        .skewBox:hover{
+            transform: skew(45deg);
+        }
+        .translateBox:hover{
+            transform: translate(300px, 200px);
+        }
+        .transDemo{
+            transition: width 5s, height 10s, font-size 5s, text-align 5s, padding-top 10s;
+        }
+        .transDemo:hover{
+            width: 300px;
+            height: 300px;
+            font-size: 60px;
+            text-align: center;
+            padding-top: 130px;
+        }
+        .customBlink{
+            font-size: 120px;
+            color: red;
+            /* animation-name: heartBlink;
+            animation-duration: 2s;
+            animation-delay: 5s;
+            animation-iteration-count: infinite; */
+            animation: heartBlink 1s 3s infinite ;
+        }
+
+        @keyframes heartBlink{
+            from{
+                font-size: 3px;
+            }
+            to{
+                font-size: 130px;
+            }
+        }
+
+        .boxTwo{
+            background-color: aqua;
+            height: 100px;
+            width: 200px;
+            border: 3px solid blue;
+            animation: animax 4s 1s infinite;
+        }
+
+        @keyframes animax{
+            0%{
+                background-color: rgb(240, 255, 250);
+            }
+            3%{
+            }
+            25%{
+                background-color: rgb(243, 231, 255);
+                border-right: 3px solid red;
+            }
+            50%{
+                background-color: rgb(255, 242, 233);
+                /* transform: rotate(60deg); */
+                border-bottom: 3px solid red;
+            }
+            60%{
+                /* transform: scale(1.5,1.2); */
+
+            }
+            75%{
+                border-left: 3px solid red;
+            }
+            100%{
+                background-color: rgb(228, 249, 249);
+                border-top: 3px solid red;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="boxTwo "></div>
+
+    <!-- <i class="fa-solid fa-heart customBlink"></i> -->
+
+    <div class="box transDemo">CSS</div>
+
+    <br>
+
+    <div class="box"></div>
+    <br>
+    <div class="box scaleBox"></div>
+    <br>
+    <div class="box rotateBox">AAA</div>
+    <br>
+    <div class="box skewBox"></div>
+    <br>
+    <div class="box translateBox"></div>
+
+
+
+</body>
+</html>
