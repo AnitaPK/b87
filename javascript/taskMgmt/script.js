@@ -15,8 +15,9 @@ const tasks = [
 const titleElmt = document.getElementById("taskTitleInput")
 const descriptionElmt = document.getElementById("taskDescriptionInput")
 
-function renderTasks() {
-    document.getElementById("renderTasks").innerHTML = tasks.map((tsk, i) => `
+function renderTasks(ts) {
+
+    document.getElementById("renderTasks").innerHTML = ts.map((tsk, i) => `
                             <tr>
                                 <td>${i + 1}</td>
                                 <td>${tsk.title}</td>
@@ -48,10 +49,11 @@ function addNewTask() {
         description: descriptionInput,
         status: "Pending"
     }
-    console.log("newTask", newTask)
-
-    tasks.push(newTask)
-    renderTasks()
+    // console.log("newTask", newTask)
+    const getFromLocalTasks = getFromLocal()
+    getFromLocalTasks.push(newTask)
+    saveToLocal(getFromLocalTasks)
+    renderTasks(getFromLocalTasks)
 
     titleElmt.value = ''
     descriptionElmt.value = ''
@@ -59,41 +61,55 @@ function addNewTask() {
 
 function deleteTask(ID) {
     console.log(ID)
-    index = tasks.findIndex((t) => t.id == ID)
+    const getFromLocalTasks = getFromLocal()
+    index = getFromLocalTasks.findIndex((t) => t.id == ID)
     console.log(index)
     if (index == -1) {
         alert("Task not found")
     } else {
-        tasks.splice(index, 1)
+        getFromLocalTasks.splice(index, 1)
     }
-    renderTasks()
+    saveToLocal(getFromLocalTasks)
+    renderTasks(getFromLocalTasks)
 }
 
+
 function EditTask(ID) {
-    index = tasks.findIndex((t) => t.id == ID)
+    const getFromLocalTasks = getFromLocal()
+
+    index = getFromLocalTasks.findIndex((t) => t.id == ID)
     if (index == -1) {
         alert("Task not found")
     } else {
-        if (tasks[index].status == "Pending") {
-            tasks[index].status = "Completed"
+        if (getFromLocalTasks[index].status == "Pending") {
+            getFromLocalTasks[index].status = "Completed"
         } else {
-            tasks[index].status = "Pending"
+            getFromLocalTasks[index].status = "Pending"
         }
     }
-    renderTasks()
+    saveToLocal(getFromLocalTasks)
+    renderTasks(getFromLocalTasks)
 }
 
 
+function saveToLocal(ts=tasks){
+localStorage.setItem("b87Tasks", JSON.stringify(ts))
+}
 
-
-
-
-
-
+function getFromLocal(){
+ return JSON.parse(localStorage.getItem("b87Tasks"))
+}
 
 
 
 
 window.addEventListener('load', () => {
-    renderTasks()
+    firstGetFromLocal = getFromLocal()
+
+    if(!firstGetFromLocal){
+            saveToLocal()
+    }
+    console.log(firstGetFromLocal)
+
+    renderTasks(firstGetFromLocal)
 })
