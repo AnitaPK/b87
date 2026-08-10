@@ -77,3 +77,41 @@ arr2 = [11, 53,2]
 
 const sortedArr = arr1.concat(arr2)
 console.log(sortedArr.sort((a,b)=> a-b))
+
+arr = [1,2,3,4,6, 4]
+
+num = arr.find((v,i)=> v == 4)
+
+console.log("****************", num)
+isEvenAll=arr.every((v,i)=> v%2==0)
+console.log(isEvenAll)
+isSomeNumOdd = arr.some((v)=> v%2!=0)
+console.log(isSomeNumOdd)
+
+
+// arr.reduce((acc, v, i)=>{}, accumulator)
+products = [{name:"IPhone", price:4, isAvailable:true},
+    {name:"Laptop", price:400, isAvailable:true},
+    {name:"TV", price:104, isAvailable:false},
+    {name:"Laptop", price:9999400, isAvailable:false},
+
+]
+cart = [{name:"IPhone", price:4, quantity:2},
+        {name:"Laptop",price:2, quantity:1}
+        ]
+
+totalAmount = 0
+
+for(let i=0; i<cart.length;i++){
+   totalAmount = totalAmount +(cart[i].price * cart[i].quantity)
+//    totalAmount +=(cart[i].price * cart[i].quantity)
+}
+
+console.log(totalAmount)
+
+tAmount = cart.reduce((totAmount,v) => totAmount += v.price*v.quantity, 0)
+console.log(tAmount)
+// forEach()
+
+prod = products.find((p,i)=> p.name == "Laptop")
+console.log(prod)

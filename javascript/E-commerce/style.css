@@ -1,0 +1,248 @@
+/* ================================
+   HERO SECTION
+================================ */
+
+.hero-section {
+    background: linear-gradient(135deg, #f8f9ff 0%, #eef1ff 100%);
+    padding: 70px 0;
+    overflow: hidden;
+}
+
+/* Keep hero around 75% of viewport height */
+.min-vh-75 {
+    min-height: 75vh;
+}
+
+/* Badge */
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    color: #6c63ff;
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 700;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    margin-bottom: 20px;
+}
+
+/* Main Heading */
+.hero-title {
+    font-size: clamp(42px, 5vw, 68px);
+    font-weight: 800;
+    line-height: 1.1;
+    color: #212529;
+    margin-bottom: 20px;
+}
+
+.hero-title span {
+    display: block;
+    color: #6c63ff;
+}
+
+/* Description */
+.hero-description {
+    max-width: 520px;
+    color: #6c757d;
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.btn-shop {
+    background: #6c63ff;
+    color: #ffffff;
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #6c63ff;
+    transition: all 0.3s ease;
+}
+
+.btn-shop:hover {
+    background: #5548e8;
+    border-color: #5548e8;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
+}
+
+.btn-shop i {
+    margin-left: 8px;
+}
+
+.btn-explore {
+    padding: 13px 25px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 2px solid #212529;
+    color: #212529;
+    transition: all 0.3s ease;
+}
+
+.btn-explore:hover {
+    background: #212529;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* Features */
+.hero-features {
+    display: flex;
+    gap: 25px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+}
+
+.hero-features div {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #495057;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.hero-features i {
+    color: #6c63ff;
+    font-size: 17px;
+}
+
+/* ================================
+   HERO IMAGE
+================================ */
+
+.hero-image-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: auto;
+    padding: 30px;
+}
+
+/* Background circle */
+.hero-circle {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    background: #6c63ff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.12;
+}
+
+/* Main image */
+.hero-image {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 480px;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* Offer Card */
+.hero-offer-card {
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 0;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: #ffffff;
+    padding: 15px 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.hero-offer-card > i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #6c63ff;
+    color: #ffffff;
+    border-radius: 50%;
+}
+
+.hero-offer-card strong,
+.hero-offer-card small {
+    display: block;
+}
+
+.hero-offer-card strong {
+    font-size: 14px;
+    color: #212529;
+}
+
+.hero-offer-card small {
+    color: #6c757d;
+    margin-top: 3px;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 991px) {
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-title {
+        font-size: 48px;
+    }
+
+    .hero-image-wrapper {
+        margin-top: 50px;
+    }
+
+}
+
+@media (max-width: 576px) {
+
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-image {
+        height: 350px;
+    }
+
+    .hero-circle {
+        width: 300px;
+        height: 300px;
+    }
+
+    .hero-features {
+        gap: 15px;
+    }
+
+    .hero-offer-card {
+        left: 5px;
+        bottom: 10px;
+    }
+}

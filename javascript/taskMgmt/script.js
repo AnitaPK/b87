@@ -93,7 +93,7 @@ function EditTask(ID) {
 
 
 function saveToLocal(ts=tasks){
-localStorage.setItem("b87Tasks", JSON.stringify(ts))
+    localStorage.setItem("b87Tasks", JSON.stringify(ts))
 }
 
 function getFromLocal(){
