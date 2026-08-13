@@ -1,0 +1,728 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+    margin: 0px;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+body{
+    max-width:1280px;
+    width:100%;
+    margin:auto;
+    padding:0 16px;
+    box-sizing:border-box;
+
+}
+
+.frist-nav{
+    background-color:white;
+     height: 58px;
+    width:100%;
+   
+}
+
+.nav-location{
+    display: flex;
+    margin-left: 47%;
+    align-items: center;
+    gap: 5px;
+
+   
+}
+
+.flip-img{
+    border-radius: 10px;
+}
+
+.logos{
+    display: flex;
+    gap: 18px;
+}
+
+.trav-icon{
+    border-radius: 10px;
+}
+
+.location{
+    font-size: 13px;
+    font-weight:700;
+}
+
+.location-link{
+    text-decoration: none;
+    margin-left: 0px; 
+    color:#1254e7;
+}
+
+.second-nav{
+    display: flex;
+    padding: 20px;
+    gap: 8px;
+    border-bottom:2px solid #ddd;
+     /* /* height: 58px; */
+    /* width:100%; */
+} 
+
+.search{
+    height: 40px;
+    width:830px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid blue;
+    font-size: 15px;
+}
+
+.login-logo{
+    justify-items: center;
+    margin-top: 10px;
+}
+
+
+
+.select{
+    justify-items: center;
+    margin-top: 10px;
+    border: 1px solid transparent;
+    
+
+}
+
+.more{
+    justify-items: center;
+    margin-top: 10px;
+    border: 1px solid transparent;
+}
+
+.cartlogo{
+     justify-items: center;
+    margin-top: 10px;
+    border: 1px solid transparent;
+}
+
+.cart{
+     justify-items: center;
+    margin-top: 10px;
+    border: 1px solid transparent;
+}
+
+.third-nav{
+      display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 8px 12px;
+    border-bottom: 1px solid #ddd;
+    /* overflow-x:hidden; */
+}
+
+.third-nav-logo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: .3s;
+    
+}
+
+
+
+.ad-1{
+    background-color:white;
+    height: 350px;
+    width:100%;
+    display: grid;
+     grid-template-columns: 450px 450px 480px 480px 480px;
+     overflow-x:scroll;
+     scroll-behavior: smooth;
+     margin: 10px;
+    
+     
+}
+
+
+
+.add1{
+     background-color:white;
+    
+    /* border: 2px solid black; */
+    height:300px ;
+   margin: 15px;
+   border-radius: 10px;
+    
+
+}
+
+.add1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+.add-2{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    height: 250px;
+    width: 100%;
+    overflow-x: scroll;
+    background-color:white;
+    margin: 20px;
+    gap: 20px;
+    margin-top: 50px;
+    
+}
+
+.add2{
+    
+    height: 200px;
+    
+    background-color:white;
+    border: 2px solid transparent;
+    border-radius: 10px;
+    
+
+}
+
+.add2 img{
+    border-radius: 10px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+}
+
+.ad-1::-webkit-scrollbar {
+    height: 8px; 
+      /* Horizontal scrollbar height */
+}
+
+.ad-1::-webkit-scrollbar-track {
+    background: #ccc;   /* Track color */
+     border-radius: 10px; 
+}
+
+.ad-1::-webkit-scrollbar-thumb {
+    background: #ccc;   /* Scrollbar color (blue) */
+    border-radius: 10px;
+}
+
+.ad-1::-webkit-scrollbar-thumb:hover {
+    background: #0b5ed7;   /* Color on hover */
+}
+
+.add-3{
+     height: 350px;
+    width: 100%;
+     background-color:#E7E2FF; 
+    padding:px;
+    padding-right: 70px;
+    border-radius: 20px;
+    padding-left: 10px;
+    
+
+
+
+}
+
+.add3{
+     display: grid;
+    grid-template-columns: 230px 230px 230px 230px;
+    height: 280px;
+    width: 106%;
+    background-color: white;
+     margin-top: 10px;
+    border-radius: 20px;
+    
+
+
+}
+
+.adv3{
+     border: 2px solid transparent;
+     margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(240, 239, 239, 0.829);
+    height: 200px;
+    
+}
+
+.add-3 h2{
+    padding-top: 15px;
+   
+}
+
+.adv3 img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.add-4{
+    height: 315px;
+    width: 104%;
+    background-color: #0b5ed7;
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px;
+    padding-top: 15px;
+    background-color: rgba(255, 166, 0, 0.686);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    
+    
+}
+
+.add4{
+    display: grid;
+    /* grid-template-columns: 230px 230px 230px 230px; */
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    background-color:white;
+    height: 280px;
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    overflow-y: scroll;
+    
+    
+
+}
+
+.adv4{
+    height: 210px;
+    border: 2px solid transparent;
+    margin: 20px;
+    background-color: aliceblue;
+
+    border-radius: 20px;
+    
+}
+
+.adv4 img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 20px;
+    
+    
+}
+
+.add-4 h2{
+    font-size: 25px;
+    margin-bottom: 10px;
+   
+    
+}
+
+.add-5{
+   display: grid;
+   grid-template-columns: 260px 260px 250px 250px; 
+   height: 500px;
+   width: 108%;
+   background-color:white;
+   padding: 10px;
+   border-radius: 10px;
+}
+
+.add5{
+    
+    height: 350px;
+    margin: 10px;
+    border-radius: 10px;
+   
+}
+
+.add5 img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.add5 p{
+    font-size: 15px;
+    /* color: #707070; */
+}
+
+.add5 del{
+    color: #707070;
+}
+
+.f{
+    display: inline;
+}
+
+.link{
+    color: #1254e7;
+}
+
+.f2{
+    display: inline;
+}
+
+
+.add-6{
+   display: grid;
+   grid-template-columns: 260px 260px 250px 250px; 
+   height: 500px;
+   width: 108%;
+   background-color:white;
+   padding: 10px;
+   border-radius: 10px;
+}
+
+.add6{
+    
+    height: 350px;
+    margin: 10px;
+    border-radius: 10px;
+   
+}
+
+.add6 img{
+    height: 100%;
+    width: 100%;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.add6 p{
+    font-size: 15px;
+    /* color: #707070; */
+}
+
+.add6 del{
+    color: #707070;
+}
+
+.f{
+    display: inline;
+}
+
+.link{
+    color: #1254e7;
+}
+
+.f2{
+    display: inline;
+}
+    </style>
+   <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+    <nav>
+        <div class="frist-nav">
+            <div class="logos">
+                <img src="https://bfsi.eletsonline.com/wp-content/uploads/2025/06/FlipKart-1.jpg" alt="" height="50px" width="110px" class="flip-img">
+                <img src="travell.png" alt="" height="50px" width="120px" class="trav-icon">
+            </div>
+
+                <div class="nav-location">
+                    <i class="fa-solid fa-location-dot"></i>
+                        <p class="location">Location not set</p>
+                        <a href="" class="location-link">Select delivery location ></a>
+                
+                </div>
+           
+        </div>
+  </nav>
+        <!-- Second navbar -->
+
+        <div class="second-nav">
+            <div class="nav-search">            
+                <input type="text" name="" id="" placeholder="Search for Products,Brands and More" class="search">
+            </div>     
+
+            <div class="login-logo">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            
+                <div class="nav-select">
+                    <select class="select">
+                    
+                        <option value="">Login </option>
+                </select>
+                    </div>
+            
+                    <div class="nav-morebutton">
+                        <select name="" id="" class="more">
+                            <option value="">More
+                            </option>
+                        </select>
+                    </div>
+
+                    <div class="cartlogo">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+
+                    <div class="cart">
+                        <p>Cart</p>
+                    </div>
+            
+        </div>
+                <!-- third navbar -->
+        <div class="third-nav">
+
+            <div class="third-nav-logo">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span>For you</span>
+            </div>
+           
+        
+            <div class="third-nav-logo">
+                <i class="fa-solid fa-vest"></i>
+                <span>Fashion</span>
+            </div>
+
+            <div class="third-nav-logo">
+                <i class="fa-solid fa-mobile"></i>
+                <span>Mobiles</span>
+            </div>
+
+            <div class="third-nav-logo">
+                <i class="fa-solid fa-pen-clip"></i>
+                <span>Beauty</span>
+            </div>
+
+             <div class="third-nav-logo">
+            <i class="fa-solid fa-laptop"></i>
+            <span>Electronics</span>
+        </div>
+            
+             <div class="third-nav-logo">   
+            <i class="fa-solid fa-tree"></i>
+            <span>Home</span>
+        </div>
+
+                 <div class="third-nav-logo">
+            <i class="fa-solid fa-tv"></i>
+            <span>Appliances</span>
+        </div>
+
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-horse"></i>
+            <span>Toys,baby..</span>
+            </div>
+
+                <div class="third-nav-logo">
+            <i class="fa-solid fa-burger"></i>
+            <span>Food & H..</span>
+        </div>
+
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-car"></i>
+            <span>Auto Acces</span>
+        </div>
+
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-person-biking"></i>
+            <span>2 Wheelers</span></div>
+
+            
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-baseball-bat-ball"></i>
+            <span>Sports &  Fit..</span></div>
+
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-book"></i>
+            <span>Books & Me</span></div>
+
+            <div class="third-nav-logo">
+            <i class="fa-solid fa-couch"></i>
+            <span>Furniture</span></div>
+        </div>
+
+        <!-- main content -->
+
+        <main>
+            <div class="ad-1">
+                <!-- <div class="adds"> -->
+                    <div class="add1">
+                    <img src="https://i.pinimg.com/originals/b7/33/b7/b733b731ca0479d8391442dc75b23b67.png" alt="">
+                    </div>
+
+                    <div class="add1">
+                        <img src="https://c8.alamy.com/comp/2FMRRKB/sun-protection-cosmetic-vector-realistic-ads-poster-white-plastic-spray-bottle-with-sunscreen-product-and-bright-green-tropical-leaves-on-glossy-background-spf-cosmetics-mock-up-for-magazine-2FMRRKB.jpg" alt="">
+                    </div>
+
+                    <div class="add1">
+                        <div class="background-img3">
+                            <img src="https://m.media-amazon.com/images/I/718F+0RgtfL._AC_UF1000,1000_QL80_.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="add1">
+                        <img src="https://d3jbu7vaxvlagf.cloudfront.net/small/v2/category_media/16445784796476_Daily_44_Mansur-Ali_Boat_Sound_System_File_11222_square.jpg" alt="">
+                    </div>
+
+                    <div class="add1">
+                        <img src="https://i.pinimg.com/736x/46/1a/56/461a56f2c4499247bb05f1246b7e4552.jpg" alt="">
+                    </div>
+
+                <!-- </div> -->
+
+            </div>
+
+            <div class="add-2">
+                <div class="add2"><img src="https://i.pinimg.com/736x/67/ce/3d/67ce3d72da94a91a83fdbc8b5ed387d8.jpg" alt=""></div>
+                <div class="add2"><img src="https://www.bbassets.com/media/uploads/p/xl/306189_7-pears-pure-gentle-soap-bar.jpg" alt=""></div>
+                <div class="add2"><img src="https://i.pinimg.com/736x/e7/76/36/e77636c9347824b81567b3efd5af32f6.jpg" alt=""></div>
+            </div>
+
+           <div class="add-3">
+            <h2>Fashions Top Deals</h2>
+            <div class="add3">
+                <div class="adv3">
+                    <img src="https://assets.myntassets.com/h_1440,q_75,w_1080/v1/assets/images/17543212/2023/2/17/1c299824-af5f-4025-83a3-1a1da0b9bb711676633518533-Puma-Men-Black--Red-Softride-Slide-Massage-Sliders-416167663-6.jpg" alt="" >
+                        <h4>30%off</h4>
+                        <p>On Puma Footwear</p>
+                    </div>
+                <div class="adv3">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT80V483SA7T_bo4tMvy8-56x4xk4Lh_G18xmVIsCmZqtes3vmI42TkfEE6&s=10" alt="" >
+                    <h4>15% Off</h4>
+                    <p>On Mens Facewash</p>
+                </div>
+                <div class="adv3">
+                    <img src="https://cdn09.nnnow.com/web-images/large/styles/PKUG623LJSP/1756123475894/1.jpg" alt="">
+                    <h4>50% Off</h4>
+                    <p>On Polo Mens T-shirt</p>    
+                </div>
+                <div class="adv3">
+                    <img src="https://images.meesho.com/images/products/896416240/zbxif_512.webp?width=512" alt="">
+                    <h4>70% Off</h4>
+                    <p>On womens Wear</p>
+                </div>
+                
+            
+           
+           </div>
+           </div>
+
+           <div class="add-4">
+            <h2>Trending Gadgets & Appliences</h2>
+            <div class="add4">
+                <div class="adv4">
+                    <img src="https://i.pinimg.com/736x/e0/8e/53/e08e5354338ada16df47213e4be1228c.jpg" alt="">
+                    <h4>20% Off</h4>
+                    <p>On Earphones</p>
+                </div>
+                <div class="adv4">
+                    <img src="https://img.magnific.com/free-psd/smart-watch-advertisement-banner-template_23-2152004842.jpg?semt=ais_hybrid&w=740&q=80" alt="">
+                    <h4>35% Off</h4>
+                    <p>On Smart watches</p>
+                </div>
+                <div class="adv4">
+                    <img src="https://i.pinimg.com/736x/0a/5f/1a/0a5f1addc06d89fc3343c4024701015f.jpg" alt="">
+                    <h4>55% Off</h4>
+                    <p>On Mens Trimer</p>
+
+                </div>
+                <div class="adv4">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRczzE93nYfMCFe-vU-rVbD-Z8a1uqzojm_RCfSQQNARCK4vIeP705x433f&s=10" alt="">
+                    <h4>25% Off</h4>
+                    <p>On Ray-Ban glasses</p>
+                </div>
+            </div>
+           </div>
+
+           
+           <!-- ADD 5 -->
+           
+           <div class="add-5">
+            <div class="add5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxJ6K1PRohQzTscvhM82qLU21MfwcryPJ9cy1KDiGHLg&s=10" alt="">
+                <h5>Ai+</h5>
+                <p  class="f">Samsung z-flip 5G(Purple, 128 GB)</p>
+                <del class="f">1,20,000</del>
+                <h5 class="f">₹95,000</h5>
+                <h6>₹93,000</h6>
+                <p  class="link">With Bnak Offer</p>
+            </div>
+            <div class="add5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSocS9GWzuVYT5h3YgTSuc0KSWoRRJWvEzCZi4fFtS3Lw&s=10" alt="">
+                    <h5>Ai+</h5>
+                <p  class="f">I Phone 15 5G(White, 128 GB)</p>
+                <del class="f">60,000</del>
+                <h5 class="f">₹55,000</h5>
+                <h6>₹53,000</h6>
+                <p  class="link">With Bnak Offer</p> 
+            </div>
+            <div class="add5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRT6PIEWAw2VObQjk8EzR807IBI9K5uVR2mw-7rP_V_IA&s=10" alt="">
+                    <h5>Oumad</h5>
+                <p  class="f">Printed Kurta, palazoo & Dupatta...</p>
+                <del class="f">2000</del>
+                <h5 class="f">₹800</h5>
+                <h6>₹700</h6>
+                <p  class="link">With Bnak Offer</p> 
+            </div>
+            <div class="add5">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQKT-b060_x9UTfd7pkqVkjPynU2WW4qXhlGuXEFwJttw&s=10" alt="">
+                    <h5>Vivo</h5>
+                <p>I V70 FE(Purple, 128 GB)</p>
+                <del class="f">18,000</del>
+                <h5 class="f">₹16,000</h5>
+                <h6 class="f2">₹14,500</h6>
+                <p class="link">With Bnak Offer</p>     
+            </div>
+           </div>
+                   
+           <!-- ADD 6 -->
+
+            <div class="add-6">
+            <div class="add6">
+                <img src="https://www.titan.co.in/dw/image/v2/BKDD_PRD/on/demandware.static/-/Sites-titan-master-catalog/default/dw4e2110fb/images/Titan/Catalog/1824BM01_1.jpg?sw=600&sh=600" alt="">
+                <h5>Titan</h5>
+                <p  class="f">luxirious  Watch</p>
+                <del class="f">20,000</del>
+                <h5 class="f">₹12,000</h5>
+                <h6>₹11,200</h6>
+                <p  class="link">With Bnak Offer</p>
+            </div>
+            <div class="add6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLxWfjk85zCSX4gIHD1KE2Gy2WdtAnMX_UlQtXoI4aDlVtRuVxLsq0_lJo&s=10" alt="">
+                    <h5>Ptron</h5>
+                <p  class="f">Water Proof Earbuds</p>
+                <del class="f">2500</del>
+                <h5 class="f">₹1800</h5>
+                <h6>1650</h6>
+                <p  class="link">With Bnak Offer</p> 
+            </div>
+            <div class="add6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtJg0tZF37kouQ5wfVHVU0OTIHpGMZIkHtia7bhWZQ0suZbVgD8VNVCmc&s=10" alt="">
+                    <h5>Covers</h5>
+                <p  class="f">Iphone moblie cover</p>
+                <del class="f">800</del>
+                <h5 class="f">₹500</h5>
+                <h6>₹430</h6>
+                <p  class="link">With Bnak Offer</p> 
+            </div>
+            <div class="add6">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWfcwG86GUxDIrEOTMiLRtl98qdwckSWw2rNuNvrhscg&s=10" alt="">
+                    <h5>Toys</h5>
+                <p>Loving Family Doll Kit</p>
+                <del class="f">800</del>
+                <h5 class="f">₹600</h5>
+                <h6 class="f2">₹50</h6>
+                <p class="link">With Bnak Offer</p>     
+            </div>
+           </div>
+        </main>
+
+        
+
+  
+</body>
+</html>

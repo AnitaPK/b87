@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biryani Insights | Royal Gold Edition</title>
+   
+    <style>
+        /* ==========================================================================
+           1. SOLID GOLD CANVAS & GREEN BORDER SYSTEM
+           ========================================================================== */
+        :root {
+            --bg-main: #f1c40f;         /* Full Solid Luxury Gold Canvas Background */
+            --card-base: #ffffff;       /* Pure white solid container backing plates */
+            --cardamom-spice: #122b19;  /* Deep Solid Cardamom Green for Borders & Text */
+            --terracotta-clay: #d36b48; /* Accent Earthen Pot Orange */
+            --text-dark: #111612;       /* Maximum legibility dark slate black */
+            --text-muted: #4a554d;      /* Deep slate gray for clean descriptions */
+            --transition-premium: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        body {
+            background-color: var(--bg-main);
+            color: var(--text-dark);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.65;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--cardamom-spice);
+        }
+
+        /* ==========================================================================
+           2. NAVIGATION HEADER (SOLID GREEN BORDER DESIGN)
+           ========================================================================== */
+        header {
+            background: #ffffff;
+            padding: 1.2rem 0;
+            border-bottom: 4px solid var(--cardamom-spice);
+            box-shadow: 0 4px 20px rgba(18, 43, 25, 0.1);
+        }
+
+        .brand-logo-img {
+            font-weight: 900;
+            font-size: 1.6rem;
+            color: var(--cardamom-spice);
+            text-decoration: none;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-logo-img span {
+            color: var(--terracotta-clay);
+        }
+
+        .header-menu-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin: 0 1.25rem;
+            transition: var(--transition-premium);
+        }
+
+        .header-menu-links a:hover, .header-menu-links a.active {
+            color: var(--terracotta-clay);
+        }
+
+        .btn-schedule {
+            background-color: var(--cardamom-spice);
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 0.65rem 1.8rem !important;
+            border-radius: 30px;
+            border: 2px solid transparent;
+            transition: var(--transition-premium);
+        }
+
+        .btn-schedule:hover {
+            background-color: transparent;
+            color: var(--cardamom-spice) !important;
+            border-color: var(--cardamom-spice);
+            transform: translateY(-2px);
+        }
+
+        /* ==========================================================================
+           3. HERO TITLE BANNER STRIP
+           ========================================================================== */
+        .hero-banner-accent {
+            background-color: var(--cardamom-spice);
+            color: #ffffff;
+            text-align: center;
+            padding: 4.5rem 1rem;
+            border-bottom: 4px solid var(--text-dark);
+        }
+
+        .hero-banner-accent h1 {
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.01em;
+        }
+
+        .hero-banner-accent p {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #ffffff;
+            opacity: 0.95;
+            margin: 0;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           4. TWO-COLUMN BALANCED MAGAZINE LAYOUT
+           ========================================================================== */
+        .main-content-layout {
+            padding: 5rem 0;
+        }
+
+        .left-article-stage {
+            background: var(--card-base);
+            padding: 3rem;
+            border-radius: 16px;
+            border: 4px solid var(--cardamom-spice); /* Solid Green Border for main content */
+            box-shadow: 8px 8px 0px rgba(18, 43, 25, 0.15);
+        }
+
+        .article-metadata-row {
+            font-size: 0.85rem;
+            font-weight: 800;
+            color: var(--terracotta-clay);
+            letter-spacing: 0.08em;
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .article-metadata-row span.comments {
+            color: var(--text-muted);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .main-graphic-card {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            background: #faf8f5;
+            border: 2px solid var(--cardamom-spice);
+            margin-bottom: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem;
+        }
+
+        .main-graphic-card img {
+            max-width: 80%;
+            height: auto;
+            filter: drop-shadow(0 25px 40px rgba(0,0,0,0.1));
+            transition: var(--transition-premium);
+        }
+
+        .left-article-stage:hover .main-graphic-card img {
+            transform: scale(1.03) rotate(2deg);
+        }
+
+        .tag-strip-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: var(--cardamom-spice);
+            color: #ffffff;
+            padding: 0.85rem 1.75rem;
+            font-size: 0.8rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+        }
+
+        .article-heading-title {
+            font-size: 2.6rem;
+            font-weight: 900;
+            line-height: 1.25;
+            color: var(--cardamom-spice);
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.02em;
+        }
+
+        .article-excerpt-text {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        /* --- Sidebar Widgets with Solid Green Borders --- */
+        .right-sidebar-stage {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .custom-search-wrapper {
+            display: flex;
+            border: 3px solid var(--cardamom-spice);
+            background: #ffffff;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .custom-search-wrapper input {
+            border: none;
+            padding: 0.85rem 1.25rem;
+            outline: none;
+            flex-grow: 1;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+
+        .custom-search-wrapper button {
+            background: var(--cardamom-spice);
+            border: none;
+            color: #ffffff;
+            padding: 0 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-premium);
+        }
+
+        .sidebar-card-widget {
+            background-color: #ffffff;
+            border: 4px solid var(--cardamom-spice); /* Solid Green Border for widgets */
+            padding: 2.25rem;
+            border-radius: 14px;
+            box-shadow: 6px 6px 0px rgba(18, 43, 25, 0.15);
+        }
+
+        .sidebar-card-widget h3 {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--cardamom-spice);
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-bottom: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .sidebar-card-widget h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--terracotta-clay);
+        }
+
+        .category-links-stack {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .category-links-stack a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 700;
+            font-size: 0.95rem;
+            transition: var(--transition-premium);
+        }
+
+        .category-links-stack a:hover {
+            color: var(--terracotta-clay);
+            padding-left: 6px;
+        }
+
+        .trending-post-card {
+            text-decoration: none;
+            display: block;
+        }
+
+        .trending-post-card h4 {
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.4;
+            margin-bottom: 0.5rem;
+            transition: var(--transition-premium);
+        }
+
+        .trending-post-card:hover h4 {
+            color: var(--terracotta-clay);
+        }
+
+        .trending-post-card span {
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--terracotta-clay);
+            text-transform: uppercase;
+        }
+
+        /* ==========================================================================
+           5. PREMIUM WAVY SPICE GREEN BRAND FOOTER SYSTEM (MATCH TO OLIPOP GRAPHIC)
+           ========================================================================== */
+        .premium-brand-footer {
+            background-color: var(--cardamom-spice); 
+            color: #ffffff;
+            position: relative;
+            padding-top: 130px; 
+            margin-top: 8rem;
+            border-top: 4px solid var(--text-dark);
+        }
+
+        .footer-wave-svg {
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 100%;
+            height: 110px;
+            overflow: hidden;
+            line-height: 0;
+        }
+
+        .footer-wave-svg svg {
+            position: relative;
+            display: block;
+            width: calc(100% + 1.3px);
+            height: 90px;
+        }
+
+        .footer-wave-svg .shape-fill {
+            fill: var(--bg-main); 
+        }
+
+        .footer-col-head {
+            font-size: 0.95rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: #ffffff;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-nav-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-nav-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-nav-links a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: var(--transition-premium);
+        }
+
+        .footer-nav-links a:hover {
+            color: var(--bg-main);
+        }
+
+        .footer-newsletter-block {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .newsletter-label-text {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .newsletter-pill-input-group {
+            display: flex;
+            background: #ffffff;
+            padding: 0.35rem;
+            border-radius: 50px; 
+            width: 100%;
+            max-width: 440px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+            border: 2px solid var(--text-dark);
+        }
+
+        .newsletter-pill-input-group input {
+            border: none;
+            background: transparent;
+            padding: 0.5rem 1.5rem;
+            outline: none;
+            flex-grow: 1;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #222222;
+        }
+
+        .btn-newsletter-submit {
+            background-color: var(--bg-main);
+            color: var(--cardamom-spice);
+            border: none;
+            padding: 0.6rem 2rem;
+            border-radius: 50px;
+            font-weight: 800;
+            font-size: 0.9rem;
+            transition: var(--transition-premium);
+        }
+
+        .btn-newsletter-submit:hover {
+            opacity: 0.9;
+            transform: scale(1.02);
+        }
+
+        .footer-social-row {
+            display: flex;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .footer-social-row a {
+            color: #ffffff;
+            font-size: 1.3rem;
+            opacity: 0.85;
+            transition: var(--transition-premium);
+        }
+
+        .footer-social-row a:hover {
+            color: var(--bg-main);
+            transform: translateY(-3px);
+            opacity: 1;
+            display: flex;
+        }
+
+        .b-corp-badge {
+            margin-top: 2.5rem;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+            padding: 0.5rem 1rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 4px;
+            opacity: 0.8;
+        }
+
+        .footer-baseboard-area {
+            margin-top: 5rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-weight: 500;
+        }
+
+        .footer-baseboard-area a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            margin-left: 2rem;
+            transition: var(--transition-premium);
+        }
+
+        .footer-baseboard-area a:hover {
+            color: #ffffff;
+        }
+
+    
+        @media (max-width: 991px) {
+            .left-article-stage { padding: 2rem 1.5rem; margin-bottom: 4rem; }
+            .hero-banner-accent h1 { font-size: 2.2rem; }
+            .footer-newsletter-block { align-items: center; text-align: center; }
+        }
+    </style>
+     <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700;800&family=Playfair+Display:wght@800;900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    
+    <header>
+        <div class="container d-flex justify-content-between align-items-center">
+            <a href="#" class="brand-logo-img">
+                biryani<span>.</span>hub
+            </a>
+            
+            <div class="header-menu-links d-none d-md-flex align-items-center">
+                <a href="#" class="active">Home</a>
+                <a href="kitchen.html">Kitchen Stories</a>
+                <a href="Secret.html">Secret Spices</a>
+                <a href="food.html">INDIAN food</a>
+                <a href="service.html">Services</a>
+            </div>
+
+            <div>
+                <a href="#" class="btn btn-schedule">Order Now</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="hero-banner-accent">
+        <div class="container">
+            <h1>Answers To Key Biryani Questions</h1>
+            <p>Learn Traditional Slow-Cooking Methods From Us</p>
+        </div>
+    </section>
+
+
+    <main class="container main-content-layout">
+        <div class="row g-4">
+            
+             
+            <div class="col-lg-8">
+                <article class="left-article-stage">
+                    <div class="article-metadata-row">
+                        
+                        
+                    </div>
+
+                    <div class="main-graphic-card">
+                        <img src="https://i.ibb.co/6PwtD4b/pngwing-com-1.png" alt="Premium Traditional Dum Cooking Graphic">
+                        <div class="tag-strip-overlay">
+                            Traditional Dum • Spice Blends • Masterclass Insights
+                        </div>
+                    </div>
+
+                    <h2 class="article-heading-title">
+                        Marketing your Franchising Business Through the Power of Authentic Dum Heritage
+                    </h2>
+                    
+                    <p class="article-excerpt-text">
+                        Traditional recipes aren't just about flavor—they are powerful brand stories. Discover how modern cloud kitchen franchises are unlocking massive scale by returning to ancient earthenware cooking mechanics, uncompromised saffron layers, and meticulous spice sourcing standards that keep customers coming back.
+                    </p>
+                </article>
+            </div>
+
+           
+            <div class="col-lg-4">
+                <div class="right-sidebar-stage">
+                    
+                    <div class="custom-search-wrapper">
+                        <input type="text" placeholder="Search insights...">
+                        <button aria-label="Submit search query"><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+
+                    <div class="sidebar-card-widget">
+                        <h3>Categories</h3>
+                        <div class="category-links-stack">
+                            <a href="hyderabadi.html">Hyderabadi Cooking</a>
+                            <a href="Awadhi.html">Awadhi Legacy</a>
+                            <a href="kolkata.html">Kolkata Variations</a>
+                            <a href="Spice.html">BIRYANI MENU-CARD</a>
+                            <a href="veg.html">Sangli veg biryani</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-card-widget">
+                        <h3>Trending</h3>
+                        <a href="#" class="trending-post-card">
+                            <h4>The Science of Perfect Grain Separation in Saffron Basmati Layers</h4>
+                            <span>Read Masterclass →</span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-6 col-md-3">
+                <h5 class="footer-col-head">Shop</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Dum Biryani</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Find In Store</a></li>
+                        <li><a href="#">Refer a Friend</a></li>
+                        <li><a href="#">Wholesale Order</a></li>
+                    </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h5 class="footer-col-head">Shop</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Dum Biryani</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Find In Store</a></li>
+                        <li><a href="#">Refer a Friend</a></li>
+                        <li><a href="#">Wholesale Order</a></li>
+                    </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h5 class="footer-col-head">Shop</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Dum Biryani</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Find In Store</a></li>
+                        <li><a href="#">Refer a Friend</a></li>
+                        <li><a href="#">Wholesale Order</a></li>
+                    </ul>
+            </div>
+            <div class="col-6 col-md-3">
+                <h5 class="footer-col-head">Shop</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Dum Biryani</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Find In Store</a></li>
+                        <li><a href="#">Refer a Friend</a></li>
+                        <li><a href="#">Wholesale Order</a></li>
+                    </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <footer id="footer" class="premium-brand-footer">
+        <!-- <div class="footer-wave-svg">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z" class="shape-fill"></path>
+            </svg>
+        </div> -->
+
+        <div class="container">
+            <div class="row ">
+                
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-col-head">Shop</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Dum Biryani</a></li>
+                        <li><a href="#">Gift Cards</a></li>
+                        <li><a href="#">Find In Store</a></li>
+                        <li><a href="#">Refer a Friend</a></li>
+                        <li><a href="#">Wholesale Order</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-col-head">Learn</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">Our Story</a></li>
+                        <li><a href="#">Blog Insights</a></li>
+                        <li><a href="#">Spice Heritage</a></li>
+                        <li><a href="#">Sustainability</a></li>
+                        <li><a href="#">Ingredients</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-col-head">Help</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">FAQ Guide</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Accessibility</a></li>
+                        <li><a href="#">Satisfaction</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-6 col-md-3 col-lg-2">
+                    <h5 class="footer-col-head">BiryaniHub</h5>
+                    <ul class="footer-nav-links">
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Press Kit</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Affiliates</a></li>
+                    </ul>
+                </div>
+
+                <!-- <div class="col-12 col-lg-4 mt-5 mt-lg-0 text-center text-lg-start">
+                    <div class="footer-newsletter-block">
+                        <div class="newsletter-label-text">Sign up to get 15% off your first order</div>
+                        
+                        <div class="newsletter-pill-input-group">
+                            <input type="email" placeholder="Your Email Address" aria-label="Email Input Field">
+                            <button class="btn-newsletter-submit" type="button">Subscribe</button>
+                        </div>
+                        
+                        <div class="footer-social-row">
+                            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+                            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fa-brands fa-pinterest"></i></a>
+                            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        </div>
+
+                        <div class="b-corp-badge">
+                            <i class="fa-solid fa-circle-check me-1"></i> Certified Culinary Corp
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+            <div class="footer-baseboard-area text-center text-md-start d-md-flex justify-content-between align-items-center">
+                <p class="mb-3 mb-md-0">&copy; 2026 Biryani Hub Media International. All Rights Reserved.</p>
+                <div class="d-flex flex-wrap justify-content-center justify-content-md-end">
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Do Not Sell My Information</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
