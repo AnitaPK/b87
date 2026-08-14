@@ -182,6 +182,20 @@ function increamentProdQuantity(ID){
 
 
 
+
+
+
+likes = [{
+    id:1,prodID:12345678456
+}]
+
+// show likes count in navbar 
+
+
+// on card of product aadd one button for like 
+
+// write function for add product like in likes array
+
 window.addEventListener("load", () => {
     prodFromLocal = getProductsFromLocal()
     cartFromLocal = getCartFromLocal()
