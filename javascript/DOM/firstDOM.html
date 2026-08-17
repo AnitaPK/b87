@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .boderRed{
+            border: 5px ridge black;
+        }
+
+    </style>
+</head>
+<body>
+<pre>
+    1. DOM
+    2. create ELement; append Elmt to Browser 
+    3. methods for get Elemnts 
+    4. style for element from javascript 
+    5. class name add and remove
+
+</pre>
+    <p class="demoOne" id="paraOne"></p>
+
+    <section id="secOne"></section>
+
+    <section class="demoOne navBarOne" id="secTwo"></section>
+
+
+
+
+    <aside class="navBarOne" id="AsideID"></aside>
+
+    <script>
+        divElmt = document.createElement("div")
+        h1Elmt = document.createElement('h1')
+
+        pElmt = document.createElement("p")
+
+
+        h1Elmt.textContent = "Document Object Model"
+
+        pElmt.textContent = "DOM stands for Document Object Model. It represents the HTML structure of a webpage in a tree-like format where every element is a node."
+
+        divElmt.appendChild(h1Elmt)
+
+        divElmt.appendChild(pElmt)
+
+        // document.body.appendChild(divElmt)
+        document.getElementById("secOne").appendChild(divElmt)
+        document.querySelector("#secOne").appendChild(divElmt)
+        demoOneClassElmt = document.querySelector(".demoOne")
+        console.log(demoOneClassElmt)
+
+        singlesection = document.querySelector("section")
+        console.log(singlesection)
+
+
+        demoClassElmts = document.querySelectorAll(".demoOne")
+        console.log(demoClassElmts, "Class all elments")
+
+        demoAlSectionElmts = document.querySelectorAll("section")
+
+        console.log(demoAlSectionElmts)
+
+       console.log(document.getElementsByTagName("section"))
+       console.log(document.getElementsByClassName("navBarOne"))
+
+
+    //    querySelector  # id      . class      tagname attributename
+    //    querySelectorAll 
+
+
+
+
+    //    getElementById 
+    //    getElementsByClassName 
+    //    getElementsByTagName 
+    //    getElemetsByAttributeName 
+
+        divElmt.style.backgroundColor  = "#c00"
+
+        h1Elmt.style.color = "orange"
+        h1Elmt.style.textAlign = "center" 
+
+
+        pElmt.classList 
+        pElmt.classList.add("boderRed")
+        pElmt.classList.remove("p-4")
+
+
+
+        
+
+    </script>
+</body>
+</html>
