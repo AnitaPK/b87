@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sizeOne{
+            width: 700px;
+            height: 500px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="sizeOne" id="boxID"></div>
+
+    <script>
+        boxElmt = document.querySelector("#boxID")
+        boxElmt.addEventListener("mouseover", (event)=>{
+            console.log("event",event)
+            boxElmt.style.backgroundColor = "red"
+            headingElemt = document.createElement("h2")
+            headingElemt.style.textAlign = "center"
+            headingElemt.style.paddingTop = "40%"
+            headingElemt.textContent = "Hello"
+           
+            boxElmt.appendChild(headingElemt)
+        })
+
+        boxElmt.addEventListener("mouseout", ()=>{
+            boxElmt.style.backgroundColor = "pink"
+            boxElmt.innerHTML = ``
+        })
+
+    </script>
+</body>
+</html>
