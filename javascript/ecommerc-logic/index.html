@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <h3>1. Product Price Checker</h3>
+    <input type="text" id="prodPrice">
+    <button onclick="checkAfforExpen()">Check Affordable / Expensive</button>
+    <div id="msgPriceCheck"></div>
+
+    <hr>
+    <h3>2. Display All Product Names</h3>
+    <ul id="productName"></ul>
+    <hr>
+
+    <h3>3.User Login Check</h3>
+
+    <div>
+        <label for="password">Email :</label>
+        <input type="email" name="" id="emailInput"> <br>
+        <label for="password" >Password</label>
+        <input type="password" name="" id="password">
+
+        <button onclick="loginCheck()">Login</button>
+        <button onclick="showHidePass()"><i class="fa-solid fa-eye"></i></button>
+        <div id="loginMSG"></div>
+    </div>
+    <div></div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
