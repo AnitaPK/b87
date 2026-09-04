@@ -11,12 +11,47 @@
 
 <body>
     <h1>Hello, world!</h1>
-    <div>
-        <pre>
-            search by project title 
-            filter (dropdown) by department 
-            filter by priority
-        </pre>
+    <div class="container">
+        <!-- Search & Filters -->
+<div class="row g-3 mb-4">
+
+    <!-- Search by Project Title -->
+    <div class="col-md-4">
+
+        <input
+            type="text"
+            id="searchProject"
+            class="form-control"
+            placeholder="Search by project title..."
+        >
+        <button onclick="SearchByTitle()">Search</button>
+    </div>
+
+
+    <!-- Filter by Department -->
+    <div class="col-md-4">
+        <label for="departmentFilter" class="form-label">
+            Department
+        </label>
+        <div id="deptRender"></div>
+    </div>
+
+
+    <!-- Filter by Priority -->
+    <div class="col-md-4">
+        <label for="priorityFilter" class="form-label">
+            Priority
+        </label>
+
+        <select id="priorityFilter" class="form-select">
+            <option value="">All Priorities</option>
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+        </select>
+    </div>
+
+</div>
     </div>
     <div class="container">
         <div style="overflow-y: auto;height: 800px;">
