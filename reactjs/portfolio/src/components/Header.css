@@ -1,0 +1,30 @@
+.container1{
+    display: flex;
+}
+.textContent{
+    flex:2
+}
+.textContent h1{
+    font-size: 30px;
+    text-align: center;
+}
+.textContent p{
+    width: 80%;
+    margin: 20px auto;
+}
+.textContent button{
+    width: 200px;
+    padding:10px  20px;
+    border-radius: 10px;
+    border: 0;
+    background-color: yellow;
+    margin-left: 250px;
+}
+.imgContent{
+    flex:1 ;
+    padding-left: 30px;
+}
+
+.imgContent img{
+    border-radius: 50%;
+}
