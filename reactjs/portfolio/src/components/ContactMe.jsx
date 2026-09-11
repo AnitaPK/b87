@@ -2,7 +2,10 @@ import React from 'react'
 
 const ContactMe = () => {
   return (
-    <div>Form
+    <div>
+      <h2 className='HeadingSec'>Contact Me</h2>
+      
+      Form
         <pre>
             name <br />
             email <br />

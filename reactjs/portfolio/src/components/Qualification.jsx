@@ -6,8 +6,8 @@ const Qualification = ({qua}) => {
 
   return (
     <section>
-    <h2>Qualification</h2>
-    <table>
+    <h2 className='HeadingSec'>Qualification</h2>
+    <table >
         <thead>
             <tr>
                 <th>Degree</th>
