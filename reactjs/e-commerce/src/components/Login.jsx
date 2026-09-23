@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
  import { ToastContainer, toast } from 'react-toastify';
 
@@ -10,9 +10,9 @@ const Login = () => {
     const [savedUser,setSavedUser] = useState()
     const navigate = useNavigate()
 
-    const handleLogin = async (event)=>{
+    const handleLogin = (event)=>{
         event.preventDefault()
-        await fetchData()
+        
         const payload = {
             email:email,
             password:password
@@ -35,7 +35,10 @@ const Login = () => {
        setSavedUser(savedUser1)
        console.log("saved user", savedUser1)
     }
-
+useEffect(()=>{
+    console.log("*************")
+    fetchData()
+},[])
     return (
         <div className="container w-50 mt-5">
             <div className="container p-4 rounded-5"
