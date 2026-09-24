@@ -1,7 +1,12 @@
 import React from 'react'
 import Card from './Card'
 
-const Products = ({ products }) => {
+const Products = ({ products, categories }) => {
+    console.log(categories)
+
+    // will write code for search and filter 
+    //product detail page
+
     return (
         <>
             <div>
@@ -9,7 +14,7 @@ const Products = ({ products }) => {
                 <button>Search</button>
                 <select name="" id="">
                     <option value="">Select Category</option>
-                    {/* map the category from api */}
+                    {categories?.map((c,i)=><option key={i}>{c}</option>)}
                 </select>
             </div>
             <div className="container">

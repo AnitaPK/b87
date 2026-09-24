@@ -9,14 +9,15 @@ import { BrowserRouter, Routes,Route } from 'react-router-dom'
 import Dashboard from './components/Dashboard'
 
 function App() {
+  const [loggedUser,setLoggedUser] = useState()
 
   return (
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Login />}></Route>
+      <Route path="/" element={<Login setLoggedUser={setLoggedUser} />}></Route>
       <Route path="/register" element={<Register />}></Route>
 
-      <Route path="/dashboard" element={<Dashboard />}></Route>
+      <Route path="/dashboard" element={<Dashboard loggedUser={loggedUser} setLoggedUser={setLoggedUser} />}></Route>
 
     </Routes>
     </BrowserRouter>

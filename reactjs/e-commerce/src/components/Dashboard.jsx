@@ -4,26 +4,45 @@ import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Products from './Products'
 
-const Dashboard = () => {
-  const [products,setProducts] = useState([])
+const Dashboard = ({ loggedUser, setLoggedUser }) => {
+  const [products, setProducts] = useState([])
+  const [categories, setCategories] = useState([])
 
 
   async function fetchData() {
     await fetch("https://dummyjson.com/products")
-        .then(res => res.json())
-        .then(data => setProducts(data.products))
-        .catch(err => console.log(err))
-}
-useEffect(()=>{
-  fetchData()
-},[])
-// console.log(products)
+      .then(res => res.json())
+      .then(data => setProducts(data.products))
+      .catch(err => console.log(err))
+      await fetchCategories()
+  }
 
+  useEffect(() => {
+     fetchData()
+  }, [])
+  // console.log(products)
+
+
+
+  function fetchCategories() {
+    console.log(products)
+    const cats = [...new Set(products.map((p) => {
+      return p.category
+    }))]
+    setCategories(cats)
+  }
+
+
+
+  useEffect(()=>{
+    fetchCategories()
+  },[products])
+  
   return (
     <>
-      <Navbar />
+      <Navbar loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
       <HeroSection />
-      <Products products={products}/>
+      <Products products={products} categories={categories} />
 
       <Footer />
     </>
