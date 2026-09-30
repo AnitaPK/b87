@@ -2,11 +2,15 @@ import { useState } from 'react'
 import './App.css'
 import Flower from './components/Flower'
 import MoreInfo from './components/MoreInfo'
+import CoinReducerGame from './components/CoinReducerGame'
+import GameCoinCollector from './components/GameCoinCollector'
 
 function App() {
 
   return (
     <>
+    <GameCoinCollector></GameCoinCollector>
+    <CoinReducerGame />
       <Flower />
       <MoreInfo></MoreInfo>
       <h1> Hello world </h1>
