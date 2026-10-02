@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Card from './Card'
 
-const Products = ({ products, categories }) => {
+const Products = ({ products, categories , dispatch}) => {
     // console.log(categories)
     const [searchTitle, setSearchTitle] = useState('')
     const [filteredProducts, setFilterProducts] = useState([])
@@ -62,7 +62,7 @@ const Products = ({ products, categories }) => {
                     {
                         filteredProducts.map((prod, i) => (
                             <div key={i} className="col-12 col-md-6 col-lg-3" >
-                               <Card prod={prod}/>
+                               <Card prod={prod} dispatch={dispatch}/>
                             </div>
                         ))
                     }

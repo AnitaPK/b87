@@ -1,6 +1,8 @@
 import React from 'react'
 import { FaUser } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import { FaShoppingBag } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = ({loggedUser, setLoggedUser}) => {
   const navigate= useNavigate()
@@ -25,6 +27,7 @@ const Navbar = ({loggedUser, setLoggedUser}) => {
       </div>
     </div>
     <div className="d-flex" role="search">
+        <Link to='/cart'><FaShoppingBag /><sup className='badge '>0</sup></Link>
         <FaUser /><span className='px-3'>{loggedUser && loggedUser.name}</span>
         <button className='btn btn-primary' onClick={handleLogout}>Logout</button>
       </div>

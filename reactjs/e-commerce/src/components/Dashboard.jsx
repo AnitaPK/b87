@@ -4,7 +4,7 @@ import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Products from './Products'
 
-const Dashboard = ({ loggedUser, setLoggedUser }) => {
+const Dashboard = ({ loggedUser, setLoggedUser, dispatch }) => {
   const [products, setProducts] = useState([])
   const [categories, setCategories] = useState([])
 
@@ -42,7 +42,7 @@ const Dashboard = ({ loggedUser, setLoggedUser }) => {
     <>
       <Navbar loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
       <HeroSection />
-      <Products products={products} categories={categories} />
+      <Products products={products} categories={categories} dispatch={dispatch} />
 
       <Footer />
     </>
