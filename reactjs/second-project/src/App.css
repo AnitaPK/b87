@@ -7,3 +7,16 @@
   background-color: black;
   color: white;
 }
+.paraOne{
+  font-size: 20px;
+  padding: 30px;
+  
+}
+.paraClassDemoDark {
+  background-color: rgb(59, 59, 59);
+  color: rgb(254, 202, 202);
+}
+.paraClassDemoLight{
+  background-color: rgb(254, 202, 202);
+  color:rgb(59, 59, 59);;
+}

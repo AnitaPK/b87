@@ -1,11 +1,14 @@
-import React, { useReducer } from 'react'
+import React, { useContext, useReducer } from 'react'
 import { Link } from 'react-router-dom'
 import { cartReducer, initialState } from '../cart/cartReducer'
+import { ThemeContext } from '../theme/ThemeProvider'
 
 const Card = ({prod, dispatch}) => {
     // const [state, dispatch] = useReducer(cartReducer, initialState)
+    const {theme} =useContext(ThemeContext)
   return (
-     <div className="card" style={{width: "18rem"}}>
+     <div className={`card mb-2 ${theme == 'light' ?'text-bg-light' :'text-bg-secondary'}`}
+     style={{width: "18rem"}}>
                                     <img src={prod.thumbnail} className="card-img-top" alt={prod.title} />
                                     <div className="card-body">
                                         <div className='text-end'>

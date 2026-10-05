@@ -1,12 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
 import HeroSection from './HeroSection'
 import Products from './Products'
+import { ThemeContext } from '../theme/ThemeProvider'
 
 const Dashboard = ({ loggedUser, setLoggedUser, dispatch }) => {
   const [products, setProducts] = useState([])
   const [categories, setCategories] = useState([])
+  const {theme} = useContext(ThemeContext)
 
 
   async function fetchData() {
@@ -39,13 +41,13 @@ const Dashboard = ({ loggedUser, setLoggedUser, dispatch }) => {
   },[products])
   
   return (
-    <>
+    <section className={`${theme == 'light' ? 'bg-light' : 'bg-dark'}`}>
       <Navbar loggedUser={loggedUser} setLoggedUser={setLoggedUser} />
       <HeroSection />
       <Products products={products} categories={categories} dispatch={dispatch} />
 
       <Footer />
-    </>
+    </section>
   )
 }
 

@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
  import { ToastContainer, toast } from 'react-toastify';
+import { ThemeContext } from '../theme/ThemeProvider';
 
 
 const Login = ({setLoggedUser}) => {
@@ -9,6 +10,8 @@ const Login = ({setLoggedUser}) => {
 
     const [savedUser,setSavedUser] = useState()
     const navigate = useNavigate()
+
+    const {theme} = useContext(ThemeContext)
 
     const handleLogin = (event)=>{
         event.preventDefault()
@@ -43,7 +46,10 @@ useEffect(()=>{
     return (
         <div className="container w-50 mt-5">
             <div className="container p-4 rounded-5"
-                style={{backgroundColor:"#d2d2d2"}}
+                style={{backgroundColor:theme === 'light' ? '#fff' : '#d2d2d2',
+                    color:theme == 'light' ? '#000' : '#fff',
+                    border:theme == 'light' && '1px solid black'
+                }}
             >
             <h3>Login here ...</h3>
             <form onSubmit={handleLogin}>

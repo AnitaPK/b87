@@ -1,14 +1,18 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import './App.css'
 import Greet from './Greet'
+import HeroSec from './HeroSec'
+import ToggleThemeBtn from './ToggleThemeBtn'
+import { ThemeContext } from './theme/ThemeProvider'
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [loggedUser, setLoggedUser] = useState('')
-  const [theme, setTheme] = useState('dark')
+  // const [theme, setTheme] = useState('dark')
   const [name, setName] = useState()
   const [msg, setMsg] = useState('')
 
+  const {theme} = useContext(ThemeContext)
   function login(){
    
     if(isLoggedIn){
@@ -40,7 +44,16 @@ function App() {
       }
   }
   return (
-    <div className={`${theme == 'light' ? 'lightTheme' : 'darkTheme'}`}>
+    <>
+    {/* <div className={`${theme == 'light' ? 'lightTheme' : 'darkTheme'}`}> */}
+    <div style={{height:"600px", border:'1px solid black'}}>
+      <ToggleThemeBtn />
+      <div className={`${theme=='light' ? 'paraClassDemoLight':'paraClassDemoDark'}`}>
+      <h1 >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti, dolore!</h1>
+      <p >Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tempora? Deserunt voluptatem quaerat cumque officiis molestias tempora, distinctio porro. Ipsum?</p>
+      </div>
+      <HeroSec />
+    </div>
      <nav>
       {loggedUser.name}
       <button onClick={login}>{isLoggedIn ? 'Logout' : 'login in'}</button>
@@ -61,7 +74,8 @@ function App() {
       </form>
 
 
-    </div>
+    {/* </div> */}
+    </>
   )
 }
 
