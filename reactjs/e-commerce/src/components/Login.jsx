@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
  import { ToastContainer, toast } from 'react-toastify';
 import { ThemeContext } from '../theme/ThemeProvider';
@@ -12,6 +12,12 @@ const Login = ({setLoggedUser}) => {
     const navigate = useNavigate()
 
     const {theme} = useContext(ThemeContext)
+
+    const emailInputRef = useRef()
+
+    function emailRef(){
+        emailInputRef.current.focus()
+    }
 
     const handleLogin = (event)=>{
         event.preventDefault()
@@ -43,6 +49,8 @@ useEffect(()=>{
     console.log("*************")
     fetchData()
 },[])
+
+useEffect(()=>{emailRef()},[])
     return (
         <div className="container w-50 mt-5">
             <div className="container p-4 rounded-5"
@@ -58,6 +66,7 @@ useEffect(()=>{
                     <input type="email" className="form-control" id="exampleInputEmail1"
                     value={email}
                     onChange={(e)=>setEmail(e.target.value)}
+                    ref={emailInputRef}
                     />
                 </div>
                 <div className="mb-3">
