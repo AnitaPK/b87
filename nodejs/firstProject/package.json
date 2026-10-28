@@ -1,0 +1,12 @@
+{
+  "name": "firstproject",
+  "version": "1.0.0",
+  "description": "thi is my first server",
+  "license": "ISC",
+  "author": "anita",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
