@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    background-color: rgb(211, 254, 255);
+}
+.heroSection{
+    background-color: rgb(254, 242, 227);
+    height: 350px;
+    padding-top: 80px;
+    position: relative;
+}
+.heroHeadingSection{
+    background-image: linear-gradient(to right, red,orange );
+    height: 60%;
+    width: 60%;
+    border-radius: 0 50px 0 50px;
+    position: absolute;
+    z-index: 2;
+    left: 20%;
+}
+.heroHeadingSection h2{
+    font-size: 4rem;
+    color: aliceblue;
+    text-align: center;
+    padding-top: 10%;
+}
+.imgEffect{
+    width: 100px;
+    height: 100px;
+}
+.icecreamEffctImg{
+    background-image: radial-gradient(red, green, red);
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+.icecreamEffctImg1{
+    background-image: radial-gradient(red, green, red);
+    border-radius: 50%;
+    position: absolute;
+    top: 150px;
+    left: 150px;
+}
+.biryaniEffectImg{
+
+}
+.headingSection{
+    text-align: center;
+    background-color: orange;
+    color: red;
+    text-shadow: 1px 1px 2px gray;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.cardsSection{
+    display: flex;
+    justify-content: space-around;
+}
+.card{
+    width:16rem;
+    height: 300px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.card img{
+    width: 100%;
+    height: 53%;
+
+}
+
+.card h3{
+    text-align: center;
+}
+.card p{
+    margin: 5px 9px;
+}
+.descriptionCard{
+    font-size: 12px;
+}
+
+.AddToCartbtn{
+    background-color: orange;
+    color: white;
+    border: 1px solid orange;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    margin: 9px;
+}
+.AddToCartbtn:hover{
+    background-color: rgb(235, 153, 0);
+    cursor: pointer;
+}
+.BuyNowBTN{
+    background-color: white;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+    border: 1px solid black;
+}
+.BuyNowBTN:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+
+.conatinerOrder{
+    width: 70%;
+    border: 1px solid gray;
+    box-shadow: 2px 2px 2px gray;
+    border-radius: 10px;
+    background-color: rgb(254, 246, 236);
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10px auto;
+
+}
+.conatinerOrder p{
+    text-align: center;
+    font-size: 32px;
+    font-family: cursive;
+}
+
+
+
+
+
+
+@media screen and (max-width:750px){
+    .cardsSection{
+        flex-wrap: wrap;
+
+    }
+}
+
+
+@media screen and (max-width:300px){
+    .cardsSection{
+        flex-direction: column;
+    }
+}
