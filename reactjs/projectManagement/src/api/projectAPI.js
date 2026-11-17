@@ -12,23 +12,36 @@ export async function getAllProjects(){
     }
 }
 
-export function getProjectByID(ID){}
-
-export function updateStatus(ID, data){
-    try {
-        const res = axiosInstance.patch(`/projects/${ID}`,data )
-        if(res){
-            return "Status Updated"
-        }else{
-        return "Error While Updating"
-        }
-    } catch (error) {
-        throw error
-        return "Error While Updating"
-    }
+export async function getProjectByID(ID){
+try {
+    const res = await axiosInstance.get(`/projects/${ID}`)
+    const re = res.data
+    console.log(re)
+    return re    
+} catch (error) {
+    console.error("Error creating project:", error);
+    throw error;
+}
 }
 
-export function updateProject(ID, data){}
+export async function updateStatus(ID, data) { 
+    try { 
+        const res = await axiosInstance.put( `/projects/${ID}`, data ); 
+        return res.data; 
+    } catch (error) {
+         console.error("Error updating status:", error); 
+         throw error; 
+    } }
+
+export async function updateProject(ID, data) {
+  try {
+    const res = await axiosInstance.put(`/projects/${ID}`, data);
+    return res.data;
+  } catch (error) {
+    console.error("Error updating project:", error);
+    throw error;
+  }
+}
 
 export async function deleteProject(ID){
     try {
@@ -44,4 +57,12 @@ export async function deleteProject(ID){
     }
 }
 
-export function createProject(Data){}
+export async function createProject(data) {
+  try {
+    const res = await axiosInstance.post("/projects", data);
+    return res.data;
+  } catch (error) {
+    console.error("Error creating project:", error);
+    throw error;
+  }
+}

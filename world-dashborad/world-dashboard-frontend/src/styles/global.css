@@ -1,0 +1,164 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #f5f6fa;
+    font-family: Arial, sans-serif;
+}
+
+.dashboard-wrapper {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+
+.sidebar {
+    width: 250px;
+    background-color: #172033;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    min-height: 100vh;
+}
+
+.sidebar-brand {
+    height: 75px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 25px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px solid #30394b;
+}
+
+.sidebar-menu {
+    padding: 25px 15px;
+    flex: 1;
+}
+
+.menu-heading {
+    font-size: 11px;
+    color: #9ca3af;
+    padding-left: 12px;
+    margin-bottom: 15px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    margin-bottom: 8px;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: #334155;
+    color: #ffffff;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    font-size: 12px;
+    color: #9ca3af;
+}
+
+/* Main content */
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.dashboard-navbar {
+    height: 75px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-content {
+    padding: 30px;
+}
+
+/* Statistics cards */
+
+.stat-card {
+    border-radius: 12px;
+    height: 100%;
+}
+
+.stat-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #eef2ff;
+    color: #4f46e5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    font-size: 23px;
+}
+
+/* Charts */
+
+.chart-card {
+    border-radius: 12px;
+    height: 100%;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 70px;
+    }
+
+    .sidebar-brand {
+        padding: 0;
+        justify-content: center;
+    }
+
+    .sidebar-brand span,
+    .sidebar-link span,
+    .menu-heading,
+    .sidebar-footer {
+        display: none;
+    }
+
+    .sidebar-menu {
+        padding: 20px 10px;
+    }
+
+    .sidebar-link {
+        justify-content: center;
+    }
+
+    .dashboard-navbar {
+        padding: 0 15px;
+    }
+
+    .page-content {
+        padding: 15px;
+    }
+
+}
