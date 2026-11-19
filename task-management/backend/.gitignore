@@ -1,0 +1,60 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# Environment variables & secrets
+.env
+.env.local
+.env.*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Build outputs & caches
+dist/
+build/
+out/
+.cache/
+.parcel-cache/
+.next/
+.nuxt/
+.turbo/
+.eslintcache
+.stylelintcache
+
+# Testing & coverage
+coverage/
+.nyc_output/
+
+# Runtime data & local tools
+pids
+*.pid
+*.seed
+*.pid.lock
+.npm
+.node_repl_history
+*.tgz
+.grunt
+.serverless/
+
+# OS & Editor files
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+upload/
