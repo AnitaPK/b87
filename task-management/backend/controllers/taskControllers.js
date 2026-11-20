@@ -10,7 +10,8 @@ async function createTask (req,res){
             priority:priority || 'Medium',
             department,
             startDate,
-            endDate
+            endDate,
+            createdBy:req.user.id
         })
         if(newTask){
             res.status(200).send({msg:"Task creadted Successfully", success:true})

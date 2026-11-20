@@ -28,11 +28,15 @@ department:{
     allowNull:false
 },
 startDate:{
-    type:DataTypes.DATEONLY(),
+    type:DataTypes.DATEONLY,
     allowNull:false
 },
 endDate:{
-    type:DataTypes.DATEONLY(),
+    type:DataTypes.DATEONLY,
+    allowNull:false
+},
+createdBy:{
+    type:DataTypes.INTEGER,
     allowNull:false
 }
 },{
@@ -42,5 +46,8 @@ endDate:{
     updatedAt: "updated_at"
 }
 )
+
+
+
 
 module.exports = Task

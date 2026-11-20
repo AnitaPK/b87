@@ -92,7 +92,16 @@ try{
         res.status(500).send({msg:"Server Error", success:false})
     }
 }
+function updatePassword(req,res){
+    // req.body.password
+    // match with old one 
+    // or 
+    // direct update new password by using bcryptjs 
+}
+function updateUser(req,res){
+    // can update all fields 
+}
 
 module.exports = {
-    register, login, getUserInfo, getAllUsers
+    register, login, getUserInfo, getAllUsers, updatePassword, updateUser
 }

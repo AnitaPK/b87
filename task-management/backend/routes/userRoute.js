@@ -8,5 +8,8 @@ router.post('/register',upload.single('profileImage'), userController.register)
 router.post('/login', userController.login)
 router.get('/getUserInfo', auth, userController.getUserInfo)
 router.get('/getAllUsers', auth, admin, userController.getAllUsers)
+router.patch('/updatePassword', auth, userController.updatePassword)
+router.put('/updateUser', userController.updateUser)
+
 
 module.exports = router

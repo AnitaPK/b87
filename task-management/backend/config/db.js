@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
 async function connectDB (){
     try{
     await sequelize.authenticate()
-    await sequelize.sync({ alter: true });
+    await sequelize.sync({ alter: false });
 
     console.log("MySQL Database Connected Successfully!")
      // Automatically update database tables
