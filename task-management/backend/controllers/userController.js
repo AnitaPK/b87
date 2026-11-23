@@ -40,6 +40,7 @@ const register = async(req, res)=>{
 
 const login = async(req,res)=>{
     try {
+        console.log(req.body)
         const {email,password} = req.body
 
         if (!email || !password) {
@@ -48,6 +49,7 @@ const login = async(req,res)=>{
         const existingUser = await User.findOne({
             where:{email}
         })
+        console.log(existingUser,"existingUser in login")
         if(!existingUser){
             return res.status(400).send({msg: "Please provide correct email",success: false});
         }
