@@ -1,43 +1,35 @@
 
-import { useAuth } from '../../context/AuthContext'
+import React from 'react'
+import DashboardLayout from '../../components/layout/DashboardLayout'
 
 const AdminDashboard = () => {
-
-    const { user, logout } = useAuth()
-
     return (
-        <div className="container mt-5">
+        <DashboardLayout role="admin">
+            <h3 className="mb-4">Admin Dashboard</h3>
 
-            <h2>Admin Dashboard</h2>
+            <div className="row g-3">
+                <div className="col-md-4">
+                    <div className="card shadow-sm p-4">
+                        <h6>Total Tasks</h6>
+                        <h2>25</h2>
+                    </div>
+                </div>
 
-            <hr />
+                <div className="col-md-4">
+                    <div className="card shadow-sm p-4">
+                        <h6>Assigned Tasks</h6>
+                        <h2>18</h2>
+                    </div>
+                </div>
 
-            <h4>Welcome, {user?.name}</h4>
-
-            <p>Email: {user?.email}</p>
-
-            <p>Role: {user?.role}</p>
-
-            {user?.profileImage && (
-                <img
-                    src={user.profileImage}
-                    alt="Profile"
-                    width="100"
-                    height="100"
-                    className="rounded-circle"
-                />
-            )}
-
-            <br />
-
-            <button
-                className="btn btn-danger mt-3"
-                onClick={logout}
-            >
-                Logout
-            </button>
-
-        </div>
+                <div className="col-md-4">
+                    <div className="card shadow-sm p-4">
+                        <h6>Total Users</h6>
+                        <h2>12</h2>
+                    </div>
+                </div>
+            </div>
+        </DashboardLayout>
     )
 }
 

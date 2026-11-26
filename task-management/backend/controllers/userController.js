@@ -85,13 +85,29 @@ const getUserInfo = async(req,res)=>{
 }
 // http://localhost:7007/upload/profile/1795063727121..png
 
-const getAllUsers = async(req,res)=>{
-try{
-    const users = await User.findAll()
-    //update data without password
-    res.status(200).send({users:users})    
-} catch (error) {
-        res.status(500).send({msg:"Server Error", success:false})
+const getAllUsers = async (req, res) => {
+    try {
+        const users = await User.findAll({
+            attributes: {
+                exclude: ['password']
+            }
+        })
+
+        res.status(200).send({
+            msg: "Users fetched successfully",
+            success: true,
+            totalUsers: users.length,
+            users: users
+        })
+
+    } catch (error) {
+        console.error("Get All Users Error:", error)
+
+        res.status(500).send({
+            msg: "Server Error",
+            success: false,
+            error: error.message
+        })
     }
 }
 function updatePassword(req,res){

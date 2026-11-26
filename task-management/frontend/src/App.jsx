@@ -13,6 +13,11 @@ import ProtectedRoute from './routes/ProtectedRoute'
 import PublicRoute from './routes/PublicRoute'
 
 import { ToastContainer } from 'react-toastify'
+import AdminTasks from './pages/admin/AdminTasks'
+import CreateTask from './pages/admin/CreateTask'
+import EditTask from './pages/admin/EditTask'
+import TaskDetails from './pages/admin/TaskDetails'
+import AssignTask from './pages/admin/AssignTask'
 
 const App = () => {
 
@@ -35,7 +40,30 @@ const App = () => {
                         <Route
                             path="/admin/dashboard" element={<AdminDashboard />}
                         />
+                       <Route
+                            path="/admin/tasks"
+                            element={<AdminTasks />}
+                        />
 
+                        <Route
+                            path="/admin/create-task"
+                            element={<CreateTask />}
+                        />
+
+                        <Route
+                            path="/admin/edit-task/:ID"
+                            element={<EditTask />}
+                        />
+
+                        <Route
+                            path="/admin/task-details/:ID"
+                            element={<TaskDetails />}
+                        />
+
+                        <Route
+                            path="/admin/assign-task"
+                            element={<AssignTask />}
+                        />
                     </Route>
 
 
@@ -48,7 +76,15 @@ const App = () => {
                         <Route
                             path="/user/dashboard"  element={<UserDashboard />}
                         />
+                        {/* <Route
+                            path="/user/my-tasks"
+                            element={<MyTasks />}
+                        />
 
+                        <Route
+                            path="/user/task-details/:ID"
+                            element={<UserTaskDetails />}
+                        /> */}
                     </Route>
 
 
